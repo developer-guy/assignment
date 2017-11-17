@@ -1,0 +1,10 @@
+server:
+  port: ${TODO_APP_PORT:8080}
+spring:
+   data:
+     mongodb:
+       username: ${MONGO_USER:bapaydin67}
+       password: ${MONGO_PASSWORD:3239966bb}
+       port: ${MONGO_PORT:13046}
+       host: ${MONGO_HOST:ds113046.mlab.com}
+       database: ${MONGO_DB:assignment}
