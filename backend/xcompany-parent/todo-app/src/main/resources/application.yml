@@ -4,7 +4,7 @@ spring:
    data:
      mongodb:
        username: ${MONGO_USER:bapaydin67}
-       password: ${MONGO_PASSWORD:3239966bb}
+       password: ${MONGO_PASSWORD:xxxxxx}
        port: ${MONGO_PORT:13046}
        host: ${MONGO_HOST:ds113046.mlab.com}
        database: ${MONGO_DB:assignment}
