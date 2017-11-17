@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/developer-guy/assignment/master/eureka.png)
+![alt text](https://raw.githubusercontent.com/developer-guy/assignment/master/eureka_2.png)
 ![alt text](https://raw.githubusercontent.com/developer-guy/assignment/master/docker.png)
 
 
