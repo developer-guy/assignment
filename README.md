@@ -14,12 +14,13 @@ Firstly , you must run maven command inside each project :
 
 To run docker image which was built by maven command :
   
-    docker run -p 8080:8080 todo-app -e MONGO_DB='assignment' \ 
+    docker run -p 8080:8080 -e MONGO_DB='assignment' \ 
     -e MONGO_USER='bapaydin67' \
     -e MONGO_PASSWORD='xxxxxx' \
     -e MONGO_PORT='13046' \
     -e MONGO_HOST='ds113046.mlab.com' \
-    --link eureka-server
+    --link eureka-server \
+    todo-app
 
     docker run -p 8761:8761  eureka-server 
     
