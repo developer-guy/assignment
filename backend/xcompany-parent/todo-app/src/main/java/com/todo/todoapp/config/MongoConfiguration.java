@@ -2,6 +2,8 @@ package com.todo.todoapp.config;
 
 import com.mongodb.*;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.MongoDbFactory;
@@ -18,6 +20,7 @@ import java.util.List;
 @Configuration
 @EnableMongoRepositories(basePackages = {"com.todo.todoapp.repository"})
 @RequiredArgsConstructor
+@Slf4j
 public class MongoConfiguration extends AbstractMongoConfiguration {
     private final MongodbProperties mongodbProperties;
 
