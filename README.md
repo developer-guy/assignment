@@ -22,9 +22,20 @@ To run docker image which was built by maven command :
     --link eureka-server
 
     docker run -p 8761:8761  eureka-server 
+    
+Some curl commands :
+
+    9909  curl -X POST -H "Content-Type: application/json" -d '{"number":1}' http://localhost:8080/resource/save
+    9910  curl -X GET http://localhost:8080/resource/find/1
+    9917  curl -X DELETE http://localhost:8080/resource/delete/0
+    9929  curl -X GET http://localhost:8080/resource/max
+    9930  curl -X GET http://localhost:8080/resource/min
+    9933  curl -X GET http://localhost:8080/resource\?type\=ASC | json_pp
+    9935  curl -X GET http://localhost:8080/resource\?type\=DESC | json_pp
 
 ## Built With
 
+Maven
 
 ## Authors
 
