@@ -18,20 +18,20 @@ import java.util.Objects;
 public class ResourceController {
     private final ResourceRepository resourceRepository;
 
-    @GetMapping(value = "")
+    @GetMapping
     public List<Resource> all(@RequestParam(value = "type",required = false) String type) throws DuplicateResourceFound {
             return resourceRepository.findAllByDirection(type);
     }
 
     @PostMapping(value = "/save")
-    public String save(@RequestBody Resource numbers) throws DuplicateResourceFound {
+    public String save(@RequestBody Resource requestBody) throws DuplicateResourceFound {
         Resource resource;
         try {
-            resource = resourceRepository.save(numbers);
+            resource = resourceRepository.save(requestBody);
         } catch (DuplicateKeyException e) {
             throw new DuplicateResourceFound(500, e.getMessage());
         }
-        return String.format("%d number saved successfully", resource.getNumber());
+        return String.format("%d'number saved successfully", resource.getNumber());
     }
 
     @GetMapping(value = "/find/{number}")

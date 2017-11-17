@@ -8,3 +8,7 @@ spring:
        port: ${MONGO_PORT:13046}
        host: ${MONGO_HOST:ds113046.mlab.com}
        database: ${MONGO_DB:assignment}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_HOST:http//localhost:8761/eureka/}
